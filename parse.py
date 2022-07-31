@@ -1,8 +1,10 @@
 import requests
 from fake_headers import Headers
 from bs4 import BeautifulSoup
+from decorators import log_func
 
 
+@log_func()
 def parse_habr(keywords):
     base_url = 'https://habr.com'
     get_articles_url = 'https://habr.com/ru'
